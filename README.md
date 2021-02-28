@@ -1,9 +1,9 @@
 # TD Ameritrade API gem for Ruby
 
-This is a gem for connecting to the OAuth/JSON-based TD Ameritrade Developers API released in 2018. Go to 
+This is a gem for connecting to the OAuth/JSON-based TD Ameritrade Developers API released in 2018. Go to
 https://developer.tdameritrade.com/ for the official documentation and to create your OAuth application.
 
-For a gem that allows you to connect to the older version of the TDAmeritrade API, go to 
+For a gem that allows you to connect to the older version of the TDAmeritrade API, go to
 https://github.com/wakproductions/tdameritrade_api
 
 ## Installation
@@ -29,8 +29,8 @@ a more detailed walkthrough of the OAuth authentication process.
 
 ```
 client = TDAmeritrade::Client.new(
-  client_id: 'MYCLIENTID@AMER.OAUTHAP', 
-  redirect_uri: 'http://my-redirect-url', 
+  client_id: 'MYCLIENTID@AMER.OAUTHAP',
+  redirect_uri: 'http://my-redirect-url',
   refresh_token: 'b6w31RJvP/Cz3MVghpx8S5dzeYVcHygEQHKWYQuI98NGpsMb1j...'
 )
 
@@ -54,6 +54,9 @@ The official API is documented [here](https://developer.tdameritrade.com/apis). 
 following functionality. If you would like to expand its functionality, then please submit a pull request.
 
 - [ ] Accounts and Trading
+  - [x] Get Account(s)
+  - [x] Get Orders
+  - [ ] Place Orders
 - [x] Authentication
 - [x] Instruments
 - [ ] Market Hours
