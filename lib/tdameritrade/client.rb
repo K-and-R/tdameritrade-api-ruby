@@ -3,6 +3,7 @@ require 'tdameritrade/client'
 require 'tdameritrade/error'
 require 'tdameritrade/version'
 require 'tdameritrade/operations/create_watchlist'
+require 'tdameritrade/operations/get_accounts'
 require 'tdameritrade/operations/get_instrument_fundamentals'
 require 'tdameritrade/operations/get_price_history'
 require 'tdameritrade/operations/get_quotes'
@@ -22,6 +23,10 @@ module TDAmeritrade
       @refresh_token_expires_at = args[:refresh_token_expires_at]
       @client_id = args[:client_id] || Error.gem_error('client_id is required!')
       @redirect_uri = args[:redirect_uri] || Error.gem_error('redirect_uri is required!')
+    end
+
+    def get_accounts
+      Operations::GetAccounts.new(self).call
     end
 
     def get_instrument_fundamentals(symbol)

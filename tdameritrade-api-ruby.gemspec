@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rake"
   spec.add_dependency "hashie"
   spec.add_dependency "httparty", "~> 0.13"
-  spec.add_dependency "activesupport", "~> 4.0"
+  spec.add_dependency "activesupport", "<= 6.1.0"
   spec.add_dependency "nokogiri", "~> 1.6"
 
   spec.add_development_dependency "clipboard"
